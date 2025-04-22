@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products locally for port 9292 locally",
+            "heading": "Browse our latest products locally for port 9292",
             "heading_size": "h0"
           }
         },
@@ -36,6 +36,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/theme_cover_image.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "image_behavior": "none",
