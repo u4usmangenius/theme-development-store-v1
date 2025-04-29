@@ -35,9 +35,37 @@ You want to control the page with drag-and-drop sections → use .json.
 You want logic-heavy layout → use .liquid.
 
 # usman here
-✅ Summary: 
+
+✅ Summary:
 
 Folder Purpose
 /templates Entry point for different page types (product, index, cart, etc.)
 /sections Layout sections used in templates
 /snippets Reusable UI parts (like buttons, price, etc.)
+
+# layout
+
+The layout/ directory contains global layout files, typically:
+
+theme.liquid
+
+password.liquid
+
+These files define the HTML skeleton and Liquid logic that wraps around all your pages (templates like product, collection, etc.).
+
+🧠 Why It's Important
+Every page is wrapped in this layout, so it's ideal for global styles, fonts, analytics scripts, etc.
+
+It allows centralized control over your theme's structure.
+
+All templates (like product.liquid, collection.liquid) are injected into this layout via:
+
+code: {{ content_for_layout }}
+
+# 🔐 password.liquid
+
+This layout is used only when your store is password protected (before launch).
+
+# locales directory
+
+The locales/ directory in a Shopify theme is where all the translation files (language settings) live. These are JSON files that define the text shown on your store in different languages.
