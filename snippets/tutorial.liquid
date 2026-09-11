@@ -38,7 +38,7 @@
   <p>Number is not null, number is {{ number }}</p>
 {% endif %}
 
-{% assign array=[1,2,3,4,5,6,7] %}
+{% assign array = renamed_variable_1 %}
 {{ array }}
 <br>
 {{ product.tags }}
@@ -74,3 +74,13 @@
     {% endcapture %}
 {{ html }}
 {{ html.size }}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign array=[1,2,3,4,5,6,7] %}"
+  to: "{% assign array = renamed_variable_1 %}"
+  position: 1111..1150
+{% endcomment %}

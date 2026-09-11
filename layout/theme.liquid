@@ -306,12 +306,7 @@
     {% comment %} {% render 'filters' %} {% endcomment %}
     {% comment %} {% render 'stringfilters' %} {% endcomment %}
     {% comment %} we can also pas parameters in file {% endcomment %}
-    {%
-      render "my-snippets",{
-      word:"word",
-      second_word:"word2"
-      }
-    %}
+    {% render "my-snippets", word: "word", second_word: "word2" %}
     {% comment %} snippets manually added by me {% endcomment %}
     <p>value;;;;;;;;;;;;;;;;;;;;;;{{ product.metafields.test_data.snowboard_length.value }}</p>
     <p>Length value: {{ product.metafields.test_data.snowboard_length.value.value }}</p>
@@ -396,3 +391,19 @@
     {%- endif -%}
   </body>
 </html>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+          render "my-snippets",{
+          word:"word",
+          second_word:"word2"
+          }
+        %}
+  to: '{% render "my-snippets", word: "word", second_word: "word2" %}'
+  position: 18735..18797
+{% endcomment %}
